@@ -1,23 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import NutritionTop from '@/pages/NutritionTop.vue'
+import NutritionSearch from '@/pages/NutritionSearch.vue'
+import NutritionList from '@/pages/NutritionList.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'NutritionTop',
+    component: NutritionTop,
+    props: route => ({
+      totalCalolie:  route.params.totalCalolie,
+      totalFat:  route.params.totalFat,
+      totalProtein:  route.params.totalProtein,
+      totalCarbon:  route.params.totalCarbon
+    })
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/search',
+    name: 'NutritionSearch',
+    component: NutritionSearch
+  },
+  {
+    path: '/list',
+    name: 'NutritionList',
+    component: NutritionList
+  },
+  
 ]
 
 const router = new VueRouter({
