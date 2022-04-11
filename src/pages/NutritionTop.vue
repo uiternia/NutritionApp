@@ -115,10 +115,10 @@
 <v-divider v-if="result" class="mb-8"></v-divider>
 <v-row v-if="result" class="justify-center">
    <p class="text-md-h5">
-    あなたのBMIは : {{result}} です
+    ①あなたのBMIは : {{result}} です
    </p>
-   <p class="text-md-h5">
-    あなたの適正体重は :
+   <p class="text-md-h5 ml-4">
+    ②あなたの適正体重は :
     {{resultWeight}}kg
     です
    </p>

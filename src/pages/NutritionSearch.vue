@@ -9,7 +9,7 @@
       <v-row class="justify-center">
      <p class="mt-8" v-for="food in foodsCalorie" :key="food.id">
        {{food.name}} カロリー: {{food.calorie}}kcal 炭水化物: {{food.carbon}}g
-       タンパク質: {{food.protein}}g 脂質: {{food.fat}}g＾
+       タンパク質: {{food.protein}}g 脂質: {{food.fat}}g
        <v-divider></v-divider>
      </p>
       </v-row>
